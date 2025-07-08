@@ -3,7 +3,7 @@ You Can Use This Script To Make Backup From `gorm` or `sqlalchemy` Database On T
 - MySQL, MariaDB and SQlite3 Are Supported.
 
 # Usage
-## Step 1
+### Step 1
 First You Need To Install `tar` And `curl`.
 ```bash
 apt install tar curl
@@ -14,19 +14,15 @@ cd /opt
 ```
 Download Project.
 ```bash 
-git clone "https://github.com/M03ED/M03ED_Backup.git"
+git clone "https://github.com/M03ED/sql_backup.git"
 ```
 Enter Project Folder
 ```bash
-cd /opt/M03ED_Backup
-```
-Make A Folder For Temporary Files (You can change this path from config.json).
-```bash
-mkdir temp
+cd /opt/sql_backup
 ```
 
-## Step 2
-Set-up Your Config file.
+### Step 2
+Set-up Your `config.json` file.
 ```json
 {
     "backup_dir": "/opt/M03ED_Backup/temp",
@@ -55,17 +51,15 @@ Set-up Your Config file.
 }
 ```
 
-## Step 3
-You Should Add Execute Permissions To The Script.
+### Step 3
+Run following command to install service.
 ```bash
-chmod +x /opt/M03ED_Backup/backup.sh
+sudo bash install_service.sh
 ```
 
-## Step 4
-Then Run The Program In `nohup` Mode To Stay Active In Background.
-```bash
-nohup /opt/M03ED_Backup/backup.sh &
-```
+Now You Have Your Backup On Telegram And Discord.
 
-- Now You Have Your Backup On Telegram And Discord.
-- New File With `nohup.out` Name Gonna Be Created in `/opt/M03ED_Backup` And It Will Record Your Script Log , You Can Delete It When Ever You Want.
+To see script output you can use this command
+```shell
+journalctl -xeu sql-backup.service
+```

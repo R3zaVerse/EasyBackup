@@ -1,5 +1,5 @@
 {
-    "backup_dir": "/opt/Marzban_Backup/temp",
+    "backup_dir": "/tmp/backup",
     "backup_interval_time": 60,
     "telegram": {
         "bot_token": "your-telegram-bot-token",
