@@ -39,8 +39,8 @@ SQL_FILE_NAME="$BACKUP_DIR/db_backup.sql"
 SPLIT_PATH="$BACKUP_DIR/split"
 
 # Size limits in bytes
-TELEGRAM_MAX_SIZE=$((50 * 1024 * 1024)) # 50MB
-DISCORD_MAX_SIZE=$((8 * 1024 * 1024))   # 8MB
+TELEGRAM_MAX_SIZE=$((49 * 1024 * 1024)) # 49MB
+DISCORD_MAX_SIZE=$((7.5 * 1024 * 1024))   # 7.5MB
 
 # Create backup directory if it doesn't exist
 mkdir -p "$BACKUP_DIR"
