@@ -2,7 +2,7 @@
 
 SERVICE_NAME="easybackup"
 SERVICE_DESCRIPTION="EasyBackup Service"
-SERVICE_DOCUMENTATION="https://github.com/M03ED/EasyBackup"
+SERVICE_DOCUMENTATION="https://github.com/YOUR_USERNAME/EasyBackup"
 MAIN_BASH_PATH="backup.sh"
 SERVICE_FILE="/etc/systemd/system/$SERVICE_NAME.service"
 
