@@ -12,7 +12,7 @@ apt install tar curl jq -y
 Clone the project and change directory:
 ```bash
 cd /opt
-git clone "https://github.com/YOUR_USERNAME/EasyBackup.git"
+git clone "https://github.com/afshin-b3/EasyBackup.git"
 cd /opt/EasyBackup
 ```
 
