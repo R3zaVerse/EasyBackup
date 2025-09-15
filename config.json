@@ -8,42 +8,8 @@
     "discord": {
         "backup_url": "your-discord-webhook-url"
     },
-    "databases": [
-        {
-            "type": "mariadb",
-            "env_path": "/opt/marzban/.env",
-            "docker_path": "/opt/marzban/docker-compose.yml",
-            "container_name": "mariadb",
-            "url_format":"sqlalchemy",
-            "external": [
-                "/var/lib/marzban/certs",
-                "/var/lib/marzban/templates",
-                "/var/lib/marzban/xray_config.json"
-            ]
-        },
-        {
-            "type": "sqlite",
-            "db_name":"test",
-            "env_path": "/opt/marzban/.env",
-            "docker_path": "/opt/marzban/docker-compose.yml",
-            "container_name": "",
-            "external": [
-                "/var/lib/marzban/certs",
-                "/var/lib/marzban/templates",
-                "/var/lib/marzban/xray_config.json"
-            ]
-        },
-        {
-            "type": "mysql",
-            "env_path": "/opt/marzban/.env",
-            "docker_path": "/opt/marzban/docker-compose.yml",
-            "container_name": "mysql",
-            "url_format":"gorm",
-            "external": [
-                "/var/lib/marzban/certs",
-                "/var/lib/marzban/templates",
-                "/var/lib/marzban/xray_config.json"
-            ]
-        }
+    "paths": [
+        "/path/to/important/file",
+        "/path/to/important/directory"
     ]
 }

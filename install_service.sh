@@ -1,23 +1,22 @@
 #!/bin/bash
 
-SERVICE_NAME="sql-backup"
-SERVICE_DESCRIPTION="M03ED SQL Backup Service"
-SERVICE_DOCUMENTATION="https://github.com/M03ED/sql_backup"
+SERVICE_NAME="easybackup"
+SERVICE_DESCRIPTION="EasyBackup Service"
+SERVICE_DOCUMENTATION="https://github.com/M03ED/EasyBackup"
 MAIN_BASH_PATH="backup.sh"
 SERVICE_FILE="/etc/systemd/system/$SERVICE_NAME.service"
 
-# Create the service file
-cat > $SERVICE_FILE <<EOF
+cat > $SERVICE_FILE <<EOT
 [Unit]
 Description=$SERVICE_DESCRIPTION
 Documentation=$SERVICE_DOCUMENTATION
 After=network.target
 
 [Service]
-WorkingDirectory=/opt/sql_backup
+WorkingDirectory=/opt/EasyBackup
 Type=simple
 User=root
-ExecStart=/bin/bash $MAIN_BASH_PATH -c /opt/sql_backup/config.json
+ExecStart=/bin/bash $MAIN_BASH_PATH -c /opt/EasyBackup/config.json
 RestartSec=5
 Restart=on-failure
 StandardOutput=journal
@@ -25,7 +24,7 @@ StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
-EOF
+EOT
 
 systemctl daemon-reload
 systemctl enable $SERVICE_NAME.service
