@@ -2,7 +2,7 @@
 
 SERVICE_NAME="easybackup"
 SERVICE_DESCRIPTION="EasyBackup Service"
-SERVICE_DOCUMENTATION="https://github.com/afshin-b3/EasyBackup"
+SERVICE_DOCUMENTATION="https://github.com/R3zaVerse/EasyBackup"
 MAIN_BASH_PATH="backup.sh"
 SERVICE_FILE="/etc/systemd/system/$SERVICE_NAME.service"
 
