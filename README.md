@@ -21,13 +21,13 @@ Configure `config.json` with your paths and credentials:
 ```json
 {
     "backup_dir": "/tmp/backup",
-    "backup_interval_time": 60,
+    "backup_interval_time": 60, // interval per minutes
     "telegram": {
-        "bot_token": "your-telegram-bot-token",
-        "chat_id": "your-chat-id"
+        "bot_token": "your-telegram-bot-token", // replace with telegram bot token, max to 50MB backup
+        "chat_id": "your-chat-id" // replace with your telegram id, you can find it with https://t.me/myidbot
     },
     "discord": {
-        "backup_url": "your-discord-webhook-url"
+        "backup_url": "your-discord-webhook-url" // replace with discord webhook, max to 10mb backup
     },
     "paths": [
         "/path/to/important/file",
