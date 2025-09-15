@@ -32,7 +32,7 @@ Configure `config.json` with your paths and credentials:
     "paths": [
         "/path/to/important/file",
         "/path/to/important/directory"
-    ]
+    ]  // any file or folder you need to add to backup file
 }
 ```
 
